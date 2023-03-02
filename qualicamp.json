@@ -3748,7 +3748,7 @@
         {
          "name":"mapImage",
          "type":"string",
-         "value":"Qualicamp.png"
+         "value":"qualicamp.png"
         }, 
         {
          "name":"mapName",
