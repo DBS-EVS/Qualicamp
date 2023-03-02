@@ -94,7 +94,17 @@ WA.room.onLeaveZone(zoneDBPlanet, () =>{
             callback: (popup => {
                 closePopUp();
             })
-        }]);
+        },
+		{
+			label: "Mehr",
+			className:"primary",
+			callback: (popup => {
+				WA.nav.openTab(urlDBPlanet);
+				isCoWebSiteOpened = true;
+				closePopUp();
+				})
+		}
+	]);
 })
 
 WA.room.onLeaveZone("portal_program", () =>{
