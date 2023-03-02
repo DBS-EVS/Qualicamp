@@ -2880,7 +2880,7 @@
                     {
                      "fontfamily":"Press Start 2P",
                      "pixelsize":8,
-                     "text":"    ^\n    ^\nPod 1:  Agilit\u00e4t",
+                     "text":"Pod 1: \n\nAgilit\u00e4t",
                      "wrap":true
                     },
                  "visible":true,
@@ -2890,14 +2890,14 @@
                 }, 
                 {
                  "class":"",
-                 "height":128,
+                 "height":233.333333333333,
                  "id":16,
                  "name":"popUpPortal",
                  "rotation":0,
                  "visible":true,
-                 "width":256,
-                 "x":2486,
-                 "y":1206
+                 "width":293.333333333333,
+                 "x":2434,
+                 "y":1146
                 }],
          "opacity":1,
          "type":"objectgroup",
