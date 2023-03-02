@@ -3743,17 +3743,17 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"DB Spacestation"
+         "value":"DB Qualicamp"
         }, 
         {
          "name":"mapImage",
          "type":"string",
-         "value":"spacestation.png"
+         "value":"Qualicamp.png"
         }, 
         {
          "name":"mapName",
          "type":"string",
-         "value":"Spacestation"
+         "value":"Qualicamp"
         }, 
         {
          "name":"script",
