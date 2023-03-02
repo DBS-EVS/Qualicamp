@@ -114,3 +114,24 @@ WA.room.onLeaveZone("portal_program", () =>{
 		isCoWebSiteOpened = false;
     }
 })
+
+WA.room.onEnterZone("schalter2_zone", () => {
+	currentPopup =  WA.ui.openPopup("popUpLernwelt","DB Lernwelt Tab öffnen?",[
+    {
+		label: "OK",
+		className:"primary",
+		callback: (popup => {
+			WA.nav.openTab("https://dblernwelt.service.deutschebahn.com/mod/scorm/view.php?id=11401");
+			isCoWebSiteOpened = true;
+			closePopUp();
+			})
+		}]);
+})
+
+WA.room.onLeaveZone("schalter2_zone", () =>{
+	closePopUp();
+	if (isCoWebSiteOpened) {
+		WA.nav.closeCoWebSite();
+		isCoWebSiteOpened = false;
+    }
+})
