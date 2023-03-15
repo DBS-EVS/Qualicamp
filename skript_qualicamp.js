@@ -372,7 +372,7 @@ WA.onInit().then(async () => {
 	
     console.log("Scripting API ready")
  
-        currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp - den Schulungsraum findest du links.\nBei Fragen melde dich an der Information rechts",[
+        currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp!\nDen Schulungsraum findest du links.\n\nDen Agilitätsraum findest du oben rechts.\n\nBei Fragen melde dich an der Information rechts.",[
     
         {
             label: "OK",
