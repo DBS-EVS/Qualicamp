@@ -19,7 +19,7 @@ var urlFeedback = "https://forms.office.com/Pages/ResponsePage.aspx?id=nC2noeZJb
 var urlDBPlanet = "https://db-planet.deutschebahn.com/pages/telefonie/apps/content/workadventure";
 
 WA.room.onEnterLayer("start_program").subscribe(() => {
-    currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp!\nDen Schulungsraum findest du links.\n\nDen Agilitätsraum findest du oben rechts.\n\nBei Fragen melde dich an der Information rechts.",[
+    currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp!\n\nDen Schulungsraum findest du links.\nDen Agilitätsraum findest du oben rechts.\nBei Fragen melde dich an der Information rechts.",[
     
         {
             label: "OK",
@@ -372,7 +372,7 @@ WA.onInit().then(async () => {
 	
     console.log("Scripting API ready")
  
-        currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp!\nDen Schulungsraum findest du links.\n\nDen Agilitätsraum findest du oben rechts.\n\nBei Fragen melde dich an der Information rechts.",[
+        currentPopup =   WA.ui.openPopup("popUpStart","Willkommen beim Quali-Camp!\n\nDen Schulungsraum findest du links.\nDen Agilitätsraum findest du oben rechts.\nBei Fragen melde dich an der Information rechts.",[
     
         {
             label: "OK",
