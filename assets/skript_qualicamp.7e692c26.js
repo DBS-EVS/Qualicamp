@@ -10,4 +10,4 @@ So bringen wir Teamgef\xFChl, Austausch und spontane Gespr\xE4che zur Abstimmung
 
 Den Schulungsraum findest du links.
 Den Agilit\xE4tsraum findest du oben rechts.
-Bei Fragen melde dich an der Information rechts.`,[{label:"OK",callback:e=>{a()}}]),WA.player.tags.includes("experimentalConfig")&&(console.log("experimentalConfig Tag found!"),WA.ui.registerMenuCommand("config test",{callback:()=>{WA.nav.openCoWebSite("./public/config.html",!0)}}))}).catch(e=>console.error(e));
+Bei Fragen melde dich an der Information rechts.`,[{label:"OK",callback:e=>{a()}}]),WA.player.tags.includes("experimentalConfig")&&(console.log("experimentalConfig Tag found!"),WA.ui.registerMenuCommand("config test",{callback:()=>{WA.nav.openCoWebSite("https://dbs-evs.github.io/Qualicamp/public/config.html",!0)}}))}).catch(e=>console.error(e));
