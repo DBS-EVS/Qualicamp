@@ -379,7 +379,7 @@ WA.onInit()
       console.log("experimentalConfig Tag found!");
     	let menu = WA.ui.registerMenuCommand("config test", {
         callback: () => {
-          WA.nav.openCoWebSite("./public/config.html", true);
+          WA.nav.openCoWebSite("https://dbs-evs.github.io/Qualicamp/public/config.html", true);
         },
       });
     }
