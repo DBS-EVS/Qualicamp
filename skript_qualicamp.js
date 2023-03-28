@@ -381,8 +381,18 @@ WA.onInit().then(async () => {
             })
         }]);
 
-    
-   
+	
+		if(WA.player.tags.includes("experimentalConfig")){
+			console.log('experimentalConfig Tag found!')
+			const menu = WA.ui.registerMenuCommand('menu test',
+		{
+			callback: () => {
+				WA.nav.openCoWebSite("config.html",true);
+				
+			}
+		})
+		}
+		
      
   
       // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
