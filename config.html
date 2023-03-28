@@ -50,16 +50,27 @@
         "info_popupText",
         document.getElementById("info").value
       );
-      WA.state.popUp_saeule = document.getElementById("saule").value;
-      WA.state.schalter1_popupText = document.getElementById("schalter1").value;
+
+      WA.state.saveVariable(
+        "popUp_saeule",
+        document.getElementById("saule").value
+      );
+
+      WA.state.saveVariable(
+        "schalter1_popupText",
+        document.getElementById("schalter1").value
+      );
       WA.state.schalter2_popupText = document.getElementById("schalter2").value;
-      WA.state.schalter3_popupText = document.getElementById("schalter3").value;
+      WA.state.saveVariable(
+        "schalter2_popupText",
+        document.getElementById("schalter2").value
+      );
+
+      WA.state.saveVariable(
+        "schalter3_popupText",
+        document.getElementById("schalter3").value
+      );
     }
-
-    //document.getElementById("saule") WA.state.saeule_iframe
-    //document.getElementById("saule") WA.state.button_saeule
-    //document.getElementById("saule") WA.state.popUp_saeule
-
-    console.log("CONFIG SCRIPT ENDE");
+        console.log("CONFIG SCRIPT ENDE");
   </script>
 </html>
