@@ -375,11 +375,11 @@ WA.onInit()
       ]
     );
 
-    if (WA.player.tags.includes("experimentalConfig")) {
-      console.log("experimentalConfig Tag found!");
-    	let menu = WA.ui.registerMenuCommand("config test", {
+    if (WA.player.tags.includes("admin")) {
+      console.log("admin Tag found!");
+    	let menu = WA.ui.registerMenuCommand("Konfiguration", {
         callback: () => {
-          WA.nav.openCoWebSite("config.html", true);
+          WA.nav.openCoWebSite("../config.html", true);
         },
       });
     }
