@@ -382,6 +382,7 @@ WA.onInit().then(async () => {
         }]);
 
 	
+
 		if(WA.player.tags.includes("experimentalConfig")){
 			console.log('experimentalConfig Tag found!')
 			const menu = WA.ui.registerMenuCommand('menu test',
