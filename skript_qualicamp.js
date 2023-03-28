@@ -375,11 +375,11 @@ WA.onInit()
       ]
     );
 
-    if (WA.player.tags.includes("admin")) {
-      console.log("admin Tag found!");
-    	let menu = WA.ui.registerMenuCommand("Konfiguration", {
+    if (WA.player.tags.includes("moderator")) {
+      console.log("moderator Tag found!");
+    	let menu = WA.ui.registerMenuCommand("Konfigurieren", {
         callback: () => {
-          WA.nav.openCoWebSite("../config.html", true);
+          WA.nav.openCoWebSite("config.html", true);
         },
       });
     }
