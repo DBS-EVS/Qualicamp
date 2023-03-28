@@ -1,0 +1,71 @@
+<html>
+<meta charset="UTF-8">
+    <body  style="background-color:rgb(255, 255, 255);">
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <script src="https://unpkg.com/@workadventure/scripting-api-extra"></script>
+
+        <div>
+           <h1> Information</h1>
+            <label for="info">Text:</label><br>
+                <input type="text" id="info" name="info"><br>
+         
+           </div>
+
+
+            <div>
+            <h1> Schalter 1</h1>
+             <label for="schalter1">Text:</label><br>
+                <input type="text" id="schalter1" name="schalter1"><br>
+            </div>
+
+             <div>
+             <h1> Schalter 2</h1>
+             <label for="schalter2">Text:</label><br>
+                <input type="text" id="schalter2" name="schalter2"><br>
+              </div>
+
+              <div>
+             <h1 > Schalter 3</h1>
+              <label for="schalter3">Text:</label><br>
+                <input type="text" id="schalter3" name="schalter3"><br>
+              </div>
+
+              <div>
+              <h1 > Säule</h1>
+               <label for="saule">Text:</label><br>
+                <input type="text" id="saule" name="saule"><br>
+                
+            </div>
+<button id="set_button" onclick="setValues()">Übernehmen</button>
+    </body>
+
+
+
+    <script>
+    
+    console.log("CONFIG SCRIPT: ")
+
+    
+    document.getElementById("info").value=WA.state.info_popupText
+   document.getElementById("saule").value=WA.state.popUp_saeule
+    document.getElementById("schalter1").value=WA.state.schalter1_popupText
+document.getElementById("schalter2").value=WA.state.schalter2_popupText
+document.getElementById("schalter3").value=WA.state.schalter3_popupText
+
+   function setValues() {
+    
+  WA.state.saveVariable("info_popupText",document.getElementById("info").value)
+  WA.state.popUp_saeule= document.getElementById("saule").value
+  WA.state.schalter1_popupText= document.getElementById("schalter1").value
+  WA.state.schalter2_popupText= document.getElementById("schalter2").value
+  WA.state.schalter3_popupText= document.getElementById("schalter3").value
+}
+
+
+    //document.getElementById("saule") WA.state.saeule_iframe
+    //document.getElementById("saule") WA.state.button_saeule
+    //document.getElementById("saule") WA.state.popUp_saeule
+
+    console.log("CONFIG SCRIPT ENDE")
+    </script>
+</html>
