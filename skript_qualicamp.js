@@ -379,7 +379,7 @@ WA.onInit()
       console.log("moderator Tag found!");
     	let menu = WA.ui.registerMenuCommand("Konfigurieren", {
         callback: () => {
-          WA.nav.openCoWebSite("config.html", true);
+          WA.nav.openCoWebSite("../config.html", true);
         },
       });
     }
