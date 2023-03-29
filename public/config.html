@@ -2,8 +2,17 @@
 <meta charset="UTF-8" />
 
 <style>
+@font-face{
+   font-family:DB-font; 
+   src: url(fonts/DBScreenSans-DigitalRegular.ttf)
+ }
 body{
-  font-family: 'Code Pro';
+  font-family: 'DB-font';
+  font-size: 22px;
+}
+label{
+  font-family: 'DB-font';
+  font-size: 15px;
 }
 .collapsible {
     background-color: #19a7a7;
@@ -12,10 +21,11 @@ body{
     padding: 18px;
     width: 100%;
     border: none;
+    border-radius: 2px;
     text-align: left;
     outline-style: double;
     font-size: 15px;
-    font-family: 'Code Pro';
+    font-family: 'DB-font';
   }
 
   .active,
@@ -31,7 +41,7 @@ body{
 			border-radius: 2px;
 			padding: 5px 15px;
 			cursor: pointer;
-      font-family: 'Code Pro';
+      font-family: 'DB-font';
 }
 .btn-primary:hover {
 			color: #292929;
@@ -42,7 +52,7 @@ body{
     display: none;
     overflow: hidden;
     background-color: #f0f8f8;
-    font-family: 'Code Pro';
+    font-family: 'DB-font';
   }
 
   input:not(.ibox) {
@@ -50,23 +60,23 @@ body{
     outline: none;
     border: 0;
     line-height: 2em;
-    font-family: 'Code Pro';
+    font-family: 'DB-font';
   }
 
   div.container {
     display: flex;
-    font-family: 'Code Pro';
+    font-family: 'DB-font';
   }
 
   div.child {
     width: 30%;
-    font-family: 'Code Pro';
+    font-family: 'DB-font';
   }
 
   div.childf {
-    margin-top: 18px;
-    margin-left: 10px;
-    font-family: 'Code Pro';
+    margin-top: 25px;
+    margin-left: 15px;
+    font-family: 'DB-font';
   }
 </style>
 
@@ -119,7 +129,7 @@ body{
     <div class="container">
 
       <div class="child">
-        <label for="schalter1_1_button">Button 1</label><br />
+        <label for="schalter1_1_button">Button 1:</label><br />
         <input type="text" id="schalter1_1_button" name="schalter1_1_button" /><br /><br />
 
       </div>
@@ -134,7 +144,7 @@ body{
 
     <div class="container">
       <div class="child">
-        <label for="schalter1_2_button">Button 2</label>
+        <label for="schalter1_2_button">Button 2:</label>
         <input type="text" id="schalter1_2_button" name="schalter1_2_button" /><br /><br />
 
       </div>
@@ -151,7 +161,7 @@ body{
 
     <div class="container">
       <div class="child">
-        <label for="schalter1_3_button">Button 3</label>
+        <label for="schalter1_3_button">Button 3:</label>
         <input type="text" id="schalter1_3_button" name="schalter1_3_button" /><br /><br />
       </div>
 
@@ -166,7 +176,7 @@ body{
     <br />
 
   </div>
-  <button type="button" class="collapsible">Schalter 2</button>
+  <button type="button" class="collapsible">Schalter 2:</button>
   <div class="content">
     <br />
     <label for="schalter2">Text:</label><br />
@@ -177,7 +187,7 @@ body{
 
     <div class="container">
       <div class="child">
-        <label for="schalter2_1_button">Button 1</label><br />
+        <label for="schalter2_1_button">Button 1:</label><br />
         <input type="text" id="schalter2_1_button" name="schalter2_1_button" /><br /><br />
       </div>
 
@@ -192,7 +202,7 @@ body{
     <div class="container">
       <div class="child">
 
-        <label for="schalter2_2_button">Button 2</label><br />
+        <label for="schalter2_2_button">Button 2:</label><br />
         <input type="text" id="schalter2_2_button" name="schalter2_2_button" /><br /><br />
 
       </div>
@@ -210,7 +220,7 @@ body{
     <div class="container">
       <div class="child">
 
-        <label for="schalter2_3_button">Button 3</label><br />
+        <label for="schalter2_3_button">Button 3:</label><br />
         <input type="text" id="schalter2_3_button" name="schalter2_3_button" /><br /><br />
       </div>
 
@@ -228,7 +238,7 @@ body{
 
 
 
-  <button type="button" class="collapsible">Schalter 3</button>
+  <button type="button" class="collapsible">Schalter 3:</button>
   <div class="content">
     <br />
     <label for="schalter3">Text:</label><br />
@@ -240,7 +250,7 @@ body{
 
     <div class="container">
       <div class="child">
-        <label for="schalter3_1_button">Button 1</label><br />
+        <label for="schalter3_1_button">Button 1:</label><br />
         <input type="text" id="schalter3_1_button" name="schalter3_1_button" /><br /><br />
       </div>
 
@@ -253,7 +263,7 @@ body{
     <input type="text" id="schalter3_2_link" name="schalter3_2_link" /><br /><br />
     <div class="container">
       <div class="child">
-        <label for="schalter3_2_button">Button 2</label><br />
+        <label for="schalter3_2_button">Button 2:</label><br />
         <input type="text" id="schalter3_2_button" name="schalter3_2_button" /><br /><br />
       </div>
 
@@ -269,7 +279,7 @@ body{
 
     <div class="container">
       <div class="child">
-        <label for="schalter3_3_button">Button 3</label><br />
+        <label for="schalter3_3_button">Button 3:</label><br />
         <input type="text" id="schalter3_3_button" name="schalter3_3_button" /><br /><br />
       </div>
 
