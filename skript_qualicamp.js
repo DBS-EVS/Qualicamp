@@ -377,12 +377,11 @@ WA.onInit()
 
     if (WA.player.tags.includes("moderator")) {
       console.log("moderator Tag found!");
-    	let menu = WA.ui.registerMenuCommand("Konfigurieren", {
+      let menu = WA.ui.registerMenuCommand("Konfigurieren", {
         callback: () => {
           WA.nav.openCoWebSite("../config.html", true);
         },
       });
     }
-
   })
   .catch((e) => console.error(e));
