@@ -1,8 +1,10 @@
 <html>
 <meta charset="UTF-8" />
+
 <style>
+
   .collapsible {
-    background-color: #777;
+    background-color: #8199c3;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -15,18 +17,21 @@
 
   .active,
   .collapsible:hover {
-    background-color: #555;
+    background-color: #3f6cc6;
   }
 
   .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #f3f1f1;
   }
 
   input:not(.ibox) {
     width: 100%;
+    outline: none;
+    border:0;
+    line-height: 1.5em;
   }
 
   div.container {
@@ -34,14 +39,16 @@
   }
 
   div.child {
-    flex: 1;
+    width: 30%;
   }
 
   div.childf {
     margin-top: 18px;
     margin-left: 10px;
   }
+
 </style>
+
 </head>
 
 <body style="background-color: rgb(255, 255, 255)">
@@ -50,25 +57,29 @@
 
   <div>
     <h1>Konfiguration</h1>
-  </div><br />
+  </div>
   <button type="button" class="collapsible">Information</button>
   <div class="content">
-    <label for="info">Text:</label><br />
-    <input type="text" id="info" name="info" /><br />
-    <label for="info_button">Button:</label><br />
-    <input type="text" id="info_button" name="info_button" /><br />
+  <br />
+    <label for="info">Text:</label>
+    <br/>
+    <input type="text" id="info" name="info" />
+    <br/><br />
+    <label for="info_link">Link:</label>
+    <br />
+    <input type="text" id="info_link" name="info_link" />
+    <br /><br />
     <div class="container">
       <div class="child">
-        <label for="info_link">Link:</label>
-        <input type="text" id="info_link" name="info_link" />
+        <label for="info_button">Button:</label><br />
+        <input type="text" id="info_button" name="info_button" />
+        <br/><br />
       </div>
 
       <div class="child childf">
         <label>iFrame <input type="checkbox" class="ibox" id="info_frame" name="info_frame" /></label>
-
       </div>
     </div>
-    <br />
     <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
     <br />
     <br />
@@ -77,16 +88,19 @@
 
   <button type="button" class="collapsible">Schalter 1</button>
   <div class="content">
+  <br />
     <label for="schalter1">Text:</label><br />
-    <input type="text" id="schalter1" name="schalter1" /><br />
+    <input type="text" id="schalter1" name="schalter1" /><br/><br />
 
-    <label for="schalter1_1_button">Button 1</label><br />
-    <input type="text" id="schalter1_1_button" name="schalter1_1_button" /><br />
+    <label for="schalter1_1_link">Link 1:</label><br />
+        <input type="text" id="schalter1_1_link" name="schalter1_1_link" /><br /><br />
 
     <div class="container">
+
       <div class="child">
-        <label for="schalter1_1_link">Link 1:</label>
-        <input type="text" id="schalter1_1_link" name="schalter1_1_link" />
+      <label for="schalter1_1_button">Button 1</label><br />
+    <input type="text" id="schalter1_1_button" name="schalter1_1_button" /><br /><br />
+        
       </div>
 
       <div class="child childf">
@@ -94,13 +108,14 @@
 
       </div>
     </div>
-    <label for="schalter1_2_button">Button 2</label><br />
-    <input type="text" id="schalter1_2_button" name="schalter1_2_button" /><br />
+    <label for="schalter1_2_link">Link 2:</label><br />
+        <input type="text" id="schalter1_2_link" name="schalter1_2_link" /><br /><br />
 
     <div class="container">
       <div class="child">
-        <label for="schalter1_2_link">Link 2:</label>
-        <input type="text" id="schalter1_2_link" name="schalter1_2_link" />
+      <label for="schalter1_2_button">Button 2</label>
+    <input type="text" id="schalter1_2_button" name="schalter1_2_button" /><br /><br />
+        
       </div>
 
       <div class="child childf">
@@ -109,14 +124,14 @@
       </div>
 
     </div>
-
-    <label for="schalter1_3_button">Button 3</label><br />
-    <input type="text" id="schalter1_3_button" name="schalter1_3_button" /><br />
+ <label for="schalter1_3_link">Link 3:</label><br />
+        <input type="text" id="schalter1_3_link" name="schalter1_3_link" /><br /><br />
+    
 
     <div class="container">
       <div class="child">
-        <label for="schalter1_3_link">Link 3:</label>
-        <input type="text" id="schalter1_3_link" name="schalter1_3_link" />
+       <label for="schalter1_3_button">Button 3</label>
+    <input type="text" id="schalter1_3_button" name="schalter1_3_button" /><br /><br />
       </div>
 
       <div class="child childf">
@@ -125,7 +140,6 @@
       </div>
 
     </div>
-    <br />
     <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
     <br />
     <br />
@@ -133,16 +147,17 @@
   </div>
   <button type="button" class="collapsible">Schalter 2</button>
   <div class="content">
+  <br />
     <label for="schalter2">Text:</label><br />
-    <input type="text" id="schalter2" name="schalter2" /><br />
-
-    <label for="schalter2_1_button">Button 1</label><br />
-    <input type="text" id="schalter2_1_button" name="schalter2_1_button" /><br />
+    <input type="text" id="schalter2" name="schalter2" /><br /><br />
+<label for="schalter2_1_link">Link 1:</label><br />
+        <input type="text" id="schalter2_1_link" name="schalter2_1_link" /><br /><br />
+    
 
     <div class="container">
       <div class="child">
-        <label for="schalter2_1_link">Link 1:</label>
-        <input type="text" id="schalter2_1_link" name="schalter2_1_link" />
+        <label for="schalter2_1_button">Button 1</label><br />
+    <input type="text" id="schalter2_1_button" name="schalter2_1_button" /><br /><br />
       </div>
 
       <div class="child childf">
@@ -151,13 +166,14 @@
       </div>
     </div>
 
-    <label for="schalter2_2_button">Button 2</label><br />
-    <input type="text" id="schalter2_2_button" name="schalter2_2_button" /><br />
-
+   <label for="schalter2_2_link">Link 2:</label><br />
+        <input type="text" id="schalter2_2_link" name="schalter2_2_link" /><br /><br />
     <div class="container">
       <div class="child">
-        <label for="schalter2_2_link">Link 2:</label>
-        <input type="text" id="schalter2_2_link" name="schalter2_2_link" />
+        
+         <label for="schalter2_2_button">Button 2</label><br />
+    <input type="text" id="schalter2_2_button" name="schalter2_2_button" /><br /><br />
+
       </div>
 
       <div class="child childf">
@@ -167,13 +183,14 @@
 
     </div>
 
-    <label for="schalter2_3_button">Button 3</label><br />
-    <input type="text" id="schalter2_3_button" name="schalter2_3_button" /><br />
-
+    
+<label for="schalter2_3_link">Link 3:</label><br />
+        <input type="text" id="schalter2_3_link" name="schalter2_3_link" /><br /><br />
     <div class="container">
       <div class="child">
-        <label for="schalter2_3_link">Link 3:</label>
-        <input type="text" id="schalter2_3_link" name="schalter2_3_link" />
+        
+        <label for="schalter2_3_button">Button 3</label><br />
+    <input type="text" id="schalter2_3_button" name="schalter2_3_button" /><br /><br />
       </div>
 
       <div class="child childf">
@@ -181,9 +198,6 @@
 
       </div>
     </div>
-
-
-    <br />
     <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
     <br />
     <br />
@@ -195,29 +209,31 @@
 
   <button type="button" class="collapsible">Schalter 3</button>
   <div class="content">
+  <br />
     <label for="schalter3">Text:</label><br />
-    <input type="text" id="schalter3" name="schalter3" /><br />
+    <input type="text" id="schalter3" name="schalter3" /><br /><br />
 
-    <label for="schalter3_1_button">Button 1</label><br />
-    <input type="text" id="schalter3_1_button" name="schalter3_1_button" /><br />
+   
+    <label for="schalter3_1_link">Link 1:</label><br />
+        <input type="text" id="schalter3_1_link" name="schalter3_1_link" /><br /><br />
 
     <div class="container">
       <div class="child">
-        <label for="schalter3_1_link">Link 1:</label>
-        <input type="text" id="schalter3_1_link" name="schalter3_1_link" />
+         <label for="schalter3_1_button">Button 1</label><br />
+    <input type="text" id="schalter3_1_button" name="schalter3_1_button" /><br /><br />
       </div>
 
       <div class="child childf">
         <label>iFrame <input type="checkbox" id="schalter3_1_frame" class="ibox" name="schalter3_1_frame" /></label>
       </div>
 </div>
-      <label for="schalter3_2_button">Button 2</label><br />
-      <input type="text" id="schalter3_2_button" name="schalter3_2_button" /><br />
-
+      
+<label for="schalter3_2_link">Link 2:</label><br />
+          <input type="text" id="schalter3_2_link" name="schalter3_2_link" /><br /><br />
       <div class="container">
         <div class="child">
-          <label for="schalter3_2_link">Link 2:</label>
-          <input type="text" id="schalter3_2_link" name="schalter3_2_link" />
+          <label for="schalter3_2_button">Button 2</label><br />
+      <input type="text" id="schalter3_2_button" name="schalter3_2_button" /><br /><br />
         </div>
 
         <div class="child childf">
@@ -226,14 +242,14 @@
 
 </div>
 
-
-        <label for="schalter3_3_button">Button 3</label><br />
-        <input type="text" id="schalter3_3_button" name="schalter3_3_button" /><br />
+ <label for="schalter3_3_link">Link 3:</label><br />
+            <input type="text" id="schalter3_3_link" name="schalter3_3_link" /><br /><br />
+  
 
         <div class="container">
           <div class="child">
-            <label for="schalter3_3_link">Link 3:</label>
-            <input type="text" id="schalter3_3_link" name="schalter3_3_link" />
+                 <label for="schalter3_3_button">Button 3</label><br />
+        <input type="text" id="schalter3_3_button" name="schalter3_3_button" /><br /><br />
           </div>
 
           <div class="child childf">
@@ -242,7 +258,6 @@
 
 </div>
 
-          <br />
           <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
           <br />
           <br />
@@ -253,14 +268,16 @@
 
         <button type="button" class="collapsible">Säule</button>
         <div class="content">
+        <br />
           <label for="saule">Text:</label><br />
-          <input type="text" id="saule" name="saule" /><br />
-          <label for="saule_button">Button:</label><br />
-          <input type="text" id="saule_button" name="saule_button" /><br />
+          <input type="text" id="saule" name="saule" /><br /><br />
+              <label for="saule_link">Link:</label><br />
+              <input type="text" id="saule_link" name="saule_link" /><br /><br />
+          
           <div class="container">
             <div class="child">
-              <label for="saule_link">Link:</label>
-              <input type="text" id="saule_link" name="saule_link" /><br />
+          <label for="saule_button">Button:</label><br />
+          <input type="text" id="saule_button" name="saule_button" /><br /><br />
             </div>
 
             <div class="child childf">
@@ -269,8 +286,7 @@
 
 
           </div>
-          <br />
-          <br />
+          
         </div>
       </div>
       <br />
@@ -279,6 +295,7 @@
 </body>
 
 <script>
+
   console.log("CONFIG SCRIPT: ");
 
   document.getElementById("info").value = WA.state.info_popupText;
@@ -530,6 +547,7 @@
       }
     });
   }
+  
   console.log("CONFIG SCRIPT ENDE");
 </script>
 
