@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <title>Minimap</title>
+    <style>
+      canvas {
+        width: 100%;
+        height: fit-content;
+      }
+    </style>
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <script src="https://unpkg.com/@workadventure/scripting-api-extra"></script>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let redColour = "#EC0016";
+      let whiteColour = "#FFFFF0";
+      let outerSize= 30;
+      let innerSize= 15; 
+      let imagePath = "./qualicamp.png";
+
+      WA.onInit()
+        .then(async () => {
+          let pos = await WA.player.getPosition();
+          let imageObj = new Image();
+          imageObj.src = imagePath;
+
+          imageObj.onload = function (event) {
+            var c = document.getElementById("myCanvas");
+
+            c.height = imageObj.height;
+            c.width = imageObj.width;
+
+            var ctx = c.getContext("2d");
+            ctx.drawImage(imageObj, 0, 0);
+
+            drawPoints(ctx, redColour, whiteColour, pos);
+
+            WA.player.onPlayerMove(async () => {
+              pos = await WA.player.getPosition();
+            });
+
+            setInterval(function () {
+              anDot(ctx, imageObj, pos);
+            }, 700);
+          };
+        })
+        .catch((e) => console.error(e));
+
+      let counter = false;
+      function anDot(ctx, imageObj, pos) {
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.drawImage(imageObj, 0, 0);
+        if (counter) {
+          drawPoints(ctx, redColour, whiteColour, pos);
+          counter = false;
+        } else {
+          drawPoints(ctx, whiteColour, redColour, pos);
+          counter = true;
+        }
+      }
+
+      function drawPoints(context, firstColor, secColor, pos) {
+        context.beginPath();
+        context.fillStyle = firstColor;
+        context.arc(pos.x, pos.y, outerSize, 0, Math.PI * 2, true);
+        context.fill();
+        context.beginPath();
+        context.fillStyle = secColor;
+        context.arc(pos.x, pos.y, innerSize, 0, Math.PI * 2, true);
+        context.fill();
+      }
+    </script>
+  </body>
+</html>
+
