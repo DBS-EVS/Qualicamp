@@ -18,11 +18,12 @@
   <body>
     <canvas id="myCanvas"></canvas>
     <script>
-      let redColour = "#EC0016";
-      let whiteColour = "#FFFFF0";
-      let outerSize= 30;
-      let innerSize= 15; 
       let imagePath = "./qualicamp.png";
+      let firstColour = "#EC0016";
+      let secondColour = "#FFFFF0";
+      let outerSize = 30;
+      let innerSize = 15;
+      let changingInterval = 700;
 
       WA.onInit()
         .then(async () => {
@@ -32,14 +33,12 @@
 
           imageObj.onload = function (event) {
             var c = document.getElementById("myCanvas");
-
             c.height = imageObj.height;
             c.width = imageObj.width;
 
             var ctx = c.getContext("2d");
             ctx.drawImage(imageObj, 0, 0);
-
-            drawPoints(ctx, redColour, whiteColour, pos);
+            drawPoints(ctx, firstColour, secondColour, pos);
 
             WA.player.onPlayerMove(async () => {
               pos = await WA.player.getPosition();
@@ -47,21 +46,22 @@
 
             setInterval(function () {
               anDot(ctx, imageObj, pos);
-            }, 700);
+            }, changingInterval);
           };
         })
         .catch((e) => console.error(e));
 
-      let counter = false;
+      let switchBool = false;
+
       function anDot(ctx, imageObj, pos) {
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.drawImage(imageObj, 0, 0);
-        if (counter) {
-          drawPoints(ctx, redColour, whiteColour, pos);
-          counter = false;
+        if (switchBool) {
+          drawPoints(ctx, firstColour, secondColour, pos);
+          switchBool = false;
         } else {
-          drawPoints(ctx, whiteColour, redColour, pos);
-          counter = true;
+          drawPoints(ctx, secondColour, firstColour, pos);
+          switchBool = true;
         }
       }
 
@@ -78,4 +78,3 @@
     </script>
   </body>
 </html>
-
