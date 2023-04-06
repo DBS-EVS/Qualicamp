@@ -18,16 +18,16 @@
     <canvas id="myCanvas"></canvas>
 
     <script>
-      let canvasId= "myCanvas"
+      let canvasId = "myCanvas";
       let imagePath = "./qualicamp.png";
       let firstColour = "#EC0016";
       let secondColour = "#FFFFF0";
-      let windowMaxSwitch= 750;
+      let windowMaxSwitch = 750;
       let changingInterval = 700;
-      let startSize=30
+      let startSize = 30;
       let outerSize = startSize;
-      let innerSize = startSize/2;
-      let maxSize = startSize*2;
+      let innerSize = startSize / 2;
+      let maxSize = startSize * 2;
 
       WA.onInit()
         .then(async () => {
@@ -39,11 +39,10 @@
             var c = document.getElementById(canvasId);
             c.height = imageObj.height;
             c.width = imageObj.width;
-            
 
             var ctx = c.getContext("2d");
             ctx.drawImage(imageObj, 0, 0);
-            
+
             drawPoints(ctx, firstColour, secondColour, pos);
 
             WA.player.onPlayerMove(async () => {
@@ -51,7 +50,7 @@
             });
 
             setInterval(function () {
-              anDot(ctx, imageObj, pos);    
+              anDot(ctx, imageObj, pos);
             }, changingInterval);
           };
         })
@@ -62,12 +61,12 @@
       function anDot(ctx, imageObj, pos) {
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.drawImage(imageObj, 0, 0);
-        if(window.innerWidth<windowMaxSwitch){
-          outerSize=maxSize;
-          innerSize=maxSize/2;
-        }else{
-          outerSize=startSize;
-          innerSize=startSize/2;
+        if (window.innerWidth < windowMaxSwitch) {
+          outerSize = maxSize;
+          innerSize = maxSize / 2;
+        } else {
+          outerSize = startSize;
+          innerSize = startSize / 2;
         }
         if (switchBool) {
           drawPoints(ctx, firstColour, secondColour, pos);
@@ -88,8 +87,6 @@
         context.arc(pos.x, pos.y, innerSize, 0, Math.PI * 2, true);
         context.fill();
       }
-
-      
     </script>
   </body>
 </html>
